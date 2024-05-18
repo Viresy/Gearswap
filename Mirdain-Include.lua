@@ -773,6 +773,8 @@ function precastequip(spell)
 				equipSet = set_combine(equipSet, sets.Precast.FastCast, sets.Precast.Songs, {range=Instrument.Count})
 			elseif spell.name == "Honor March" then
 				equipSet = set_combine(equipSet, sets.Precast.FastCast, sets.Precast.Songs, {range=Instrument.Honor})
+			elseif spell.name == "Aria of Passion" then
+				equipSet = set_combine(equipSet, sets.Precast.FastCast, sets.Precast.Songs, {range=Instrument.Aria})
 			else
 				equipSet = set_combine(equipSet, sets.Precast.FastCast, sets.Precast.Songs, {range=Instrument.Potency})
 			end
@@ -786,6 +788,9 @@ function precastequip(spell)
 			-- Equip Marsyas
 			elseif spell.name == "Honor March" then
 				equipSet = set_combine(sets.Midcast, {range=Instrument.Honor})
+			-- Equip Loughnashade
+			elseif spell.name == "Aria of Passion" then
+				equipSet = set_combine(sets.Midcast, {range=Instrument.Aria})
 			-- Equip Harp
 			elseif spell.name:contains('Horde') then
 				info( '['..spell.english..'] Set (AOE Sleep - Daurdabla)')
